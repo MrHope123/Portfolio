@@ -425,13 +425,14 @@ section {
 .layer h5{
   color: #530a0a;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: bolder; /*edited*/
   line-height: 1.8;
 }
 
 .layer p{
   color: #fff;
-  font-size: 1rem;
+  font-weight: bolder;  /*edited*/
+  font-size: 1.2rem;
   line-height: 1.8;
 }
 
