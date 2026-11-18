@@ -3,34 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="dark">
+  <meta name="color-scheme" content="light dark">
   <title>Fulufhelo Maluleke | Software Engineer</title>
   <meta name="description" content="Software engineer with two years of experience developing and maintaining banking applications with Java and Spring Boot. Johannesburg, South Africa.">
   <meta property="og:title" content="Fulufhelo Maluleke | Software Engineer">
   <meta property="og:description" content="Two years at FNB building banking applications with Java and Spring Boot. Secure REST APIs and tests that prove the rules.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2363b3ed'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='15' font-weight='700' text-anchor='middle' fill='%23060b14'%3EFM%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2318181b'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='15' font-weight='700' text-anchor='middle' fill='white'%3EFM%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Lucide icons — lightweight SVG icon library -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Animated background -->
-  <div class="bg-orbs" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="orb orb-4"></div>
-  </div>
-
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="#top">Fulufhelo Maluleke</a>
-      <nav aria-label="Main">
+
+      <!-- Desktop nav -->
+      <nav class="nav-desktop" aria-label="Main">
         <ul class="nav-list">
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger button (mobile) -->
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i data-lucide="menu" class="icon-menu"></i>
+        <i data-lucide="x" class="icon-close"></i>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav aria-label="Mobile">
+        <ul class="mobile-nav-list">
           <li><a href="#experience">Experience</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#approach">Approach</a></li>
@@ -43,33 +61,47 @@
 
   <main id="main">
 
-    <!-- ======================================================
+    <!-- ============================================================
          HERO
-         ====================================================== -->
+         ============================================================ -->
     <section class="hero" id="top">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <span class="section-label">Software Engineer · Johannesburg, ZA</span>
-          <h1>I build secure,&nbsp;<span class="keep">well-tested</span> backend services for banking.</h1>
+          <span class="section-label">
+            <i data-lucide="map-pin" class="label-icon"></i>
+            Software Engineer · Johannesburg, ZA
+          </span>
+          <h1>I build secure, <span class="keep">well-tested</span> backend services for banking.</h1>
           <p class="lead">Two years at FNB developing and maintaining banking applications with Java and Spring Boot. I debug, test, and work closely with DevOps to ship.</p>
           <div class="actions">
-            <a class="button" href="#experience">See my experience</a>
-            <a class="button-ghost" href="mailto:fulufhelomalulekefm@gmail.com">Email me</a>
-          </div>
-          <div class="hero-scroll" aria-hidden="true">
-            <span class="scroll-line"></span>
-            <span>Scroll to explore</span>
+            <a class="button" href="#experience">
+              <i data-lucide="arrow-down" class="btn-icon"></i>
+              See my experience
+            </a>
+            <a class="button-ghost" href="mailto:fulufhelomalulekefm@gmail.com">
+              <i data-lucide="mail" class="btn-icon"></i>
+              Email me
+            </a>
           </div>
         </div>
 
         <!-- Demo panel -->
-        <div class="demo glass" data-demo aria-labelledby="demo-title">
-          <h2 class="demo-title" id="demo-title">Same request, two callers</h2>
+        <div class="demo card" data-demo aria-labelledby="demo-title">
+          <h2 class="demo-title" id="demo-title">
+            <i data-lucide="terminal" class="demo-icon"></i>
+            Same request, two callers
+          </h2>
           <p class="demo-intro">A transfer of R250 out of one account, sent to my own banking API project.</p>
 
           <div class="demo-controls js-only" role="group" aria-label="Choose who sends the request">
-            <button type="button" data-scenario="owner" aria-pressed="false">Account owner</button>
-            <button type="button" data-scenario="other" aria-pressed="true">A different customer</button>
+            <button type="button" data-scenario="owner" aria-pressed="false">
+              <i data-lucide="shield-check" class="btn-icon"></i>
+              Account owner
+            </button>
+            <button type="button" data-scenario="other" aria-pressed="true">
+              <i data-lucide="shield-off" class="btn-icon"></i>
+              Different customer
+            </button>
           </div>
 
           <pre class="code request"><code>POST /api/user/transfer
@@ -81,7 +113,10 @@
 
           <div class="scenario" data-scenario="owner">
             <p class="caller">Sent with the token of the account owner</p>
-            <p class="status allow"><span class="status-code">200 OK</span> Allowed. The money moves.</p>
+            <p class="status allow">
+              <span class="status-code">200 OK</span>
+              Allowed. The money moves.
+            </p>
             <pre class="code response"><code>{
   "responseCode": "008",
   "responseMessage": "Transfer completed successfully",
@@ -95,7 +130,10 @@
 
           <div class="scenario" data-scenario="other">
             <p class="caller">Sent with the token of a different customer</p>
-            <p class="status deny"><span class="status-code">403 Forbidden</span> Refused. Nothing changes.</p>
+            <p class="status deny">
+              <span class="status-code">403 Forbidden</span>
+              Refused. Nothing changes.
+            </p>
             <pre class="code response"><code>{
   "status": 403,
   "responseCode": "012",
@@ -108,18 +146,30 @@
       </div>
     </section>
 
-    <!-- ======================================================
+    <!-- ============================================================
          EXPERIENCE
-         ====================================================== -->
+         ============================================================ -->
     <section class="section" id="experience" aria-labelledby="experience-title">
       <div class="wrap narrow">
-        <span class="section-label">Career</span>
+        <span class="section-label">
+          <i data-lucide="briefcase" class="label-icon"></i>
+          Career
+        </span>
         <h2 id="experience-title">Experience</h2>
 
-        <article class="job glass job-glass reveal">
+        <article class="job card job-card reveal">
           <header class="job-head">
-            <h3>Software Developer (ECM) — First National Bank</h3>
-            <span class="job-meta">Oct 2024 – Oct 2026</span>
+            <div>
+              <h3>Software Developer (ECM)</h3>
+              <p class="job-company">
+                <i data-lucide="building-2" class="inline-icon"></i>
+                First National Bank
+              </p>
+            </div>
+            <span class="job-meta">
+              <i data-lucide="calendar" class="inline-icon"></i>
+              Oct 2024 – Oct 2026
+            </span>
           </header>
           <ul class="bullets">
             <li>Wrote and maintained object-oriented Java code for an enterprise platform using Spring Boot, and fixed bugs as part of a development team.</li>
@@ -130,67 +180,85 @@
             <li>Migrated a legacy JBoss/WAR application to Spring Boot, including javax-to-jakarta updates and updated tests.</li>
             <li>Used Git, Maven and Docker, and worked with DevOps on integration and deployment pipelines.</li>
           </ul>
-          <p class="job-note">The code from this work belongs to FNB and is not public. The banking API in the Work section is my public example of how I build.</p>
+          <p class="job-note">
+            <i data-lucide="info" class="inline-icon"></i>
+            The code from this work belongs to FNB and is not public. The banking API in the Work section is my public example of how I build.
+          </p>
         </article>
 
         <h3 class="subhead">Technical Projects</h3>
         <div class="tech-projects reveal-stagger">
 
-          <div class="glass tech-project-card reveal-child">
-            <h4>Hexaro Portal — Content Management Admin Portal</h4>
+          <div class="card tech-project-card reveal-child">
+            <div class="project-header">
+              <i data-lucide="layout-dashboard" class="project-icon"></i>
+              <h4>Hexaro Portal — Content Management Admin Portal</h4>
+            </div>
             <p>Built a React admin portal with a Spring Boot backend-for-frontend for file upload, search, retrieval and metadata management.</p>
             <div class="chip-row">
               <span class="chip">Java 25</span>
               <span class="chip">Spring Boot 4</span>
-              <span class="chip purple">React</span>
+              <span class="chip">React</span>
               <span class="chip">REST APIs</span>
             </div>
           </div>
 
-          <div class="glass tech-project-card reveal-child">
-            <h4>TMS Self-Service — Document Template Management</h4>
+          <div class="card tech-project-card reveal-child">
+            <div class="project-header">
+              <i data-lucide="file-text" class="project-icon"></i>
+              <h4>TMS Self-Service — Document Template Management</h4>
+            </div>
             <p>Built a Spring Boot application to create, edit, download and generate PDF documents from templates. Used PostgreSQL with Flyway migrations, Spring Security and Swagger/OpenAPI documentation, and containerised it with Docker.</p>
             <div class="chip-row">
               <span class="chip">Java</span>
               <span class="chip">Spring Boot</span>
               <span class="chip">PostgreSQL</span>
               <span class="chip">Flyway</span>
-              <span class="chip purple">Spring Security</span>
+              <span class="chip">Spring Security</span>
               <span class="chip">Docker</span>
             </div>
           </div>
 
-          <div class="glass tech-project-card reveal-child">
-            <h4>Hexaro Hive — Content Management REST API</h4>
+          <div class="card tech-project-card reveal-child">
+            <div class="project-header">
+              <i data-lucide="database" class="project-icon"></i>
+              <h4>Hexaro Hive — Content Management REST API</h4>
+            </div>
             <p>Developed REST API functionality for document upload, retrieval, search and updates. Implemented file validation, document versioning and concurrency control, backed by automated testing.</p>
             <div class="chip-row">
               <span class="chip">Java</span>
               <span class="chip">Spring Boot</span>
               <span class="chip">REST APIs</span>
-              <span class="chip green">JUnit</span>
+              <span class="chip">JUnit</span>
             </div>
           </div>
 
-          <div class="glass tech-project-card reveal-child">
-            <h4>Hexaro MCP — AI Integration Microservice</h4>
+          <div class="card tech-project-card reveal-child">
+            <div class="project-header">
+              <i data-lucide="bot" class="project-icon"></i>
+              <h4>Hexaro MCP — AI Integration Microservice</h4>
+            </div>
             <p>Built a Spring Boot microservice using the Model Context Protocol so AI agents can search, fetch, upload and update enterprise content.</p>
             <div class="chip-row">
               <span class="chip">Java 25</span>
-              <span class="chip purple">Spring AI</span>
+              <span class="chip">Spring AI</span>
               <span class="chip">Virtual Threads</span>
               <span class="chip">JSON-RPC</span>
               <span class="chip">Maven</span>
             </div>
           </div>
 
-          <div class="glass tech-project-card reveal-child">
-            <h4>DistributionService — Legacy Java Migration</h4>
+          <div class="card tech-project-card reveal-child">
+            <div class="project-header">
+              <i data-lucide="arrow-right-left" class="project-icon"></i>
+              <h4>DistributionService — Legacy Java Migration</h4>
+            </div>
             <p>Migrated a legacy JBoss/WAR application to a Spring Boot JAR architecture, moving javax annotations to jakarta and updating unit tests.</p>
             <div class="chip-row">
               <span class="chip">Java</span>
               <span class="chip">JBoss/WAR</span>
               <span class="chip">Spring Boot</span>
-              <span class="chip green">JUnit</span>
+              <span class="chip">JUnit</span>
               <span class="chip">Maven</span>
             </div>
           </div>
@@ -199,48 +267,69 @@
       </div>
     </section>
 
-    <!-- ======================================================
+    <!-- ============================================================
          SELECTED WORK
-         ====================================================== -->
+         ============================================================ -->
     <section class="section" id="work" aria-labelledby="work-title">
       <div class="wrap">
-        <span class="section-label">Projects</span>
+        <span class="section-label">
+          <i data-lucide="code-2" class="label-icon"></i>
+          Projects
+        </span>
         <h2 id="work-title">Selected Work</h2>
 
         <div class="feature reveal">
-          <div class="glass feature-glass feature-intro">
-            <h3>Secure Banking API</h3>
+          <div class="card feature-card feature-intro">
+            <h3>
+              <i data-lucide="landmark" class="project-icon"></i>
+              Secure Banking API
+            </h3>
             <p>A personal project with public code: a Spring Boot REST API where customers sign up, log in, and move money between accounts. Every customer can reach only their own account, and the rule is enforced where it cannot be bypassed.</p>
             <div class="chip-row">
               <span class="chip">Java 17</span>
               <span class="chip">Spring Boot 3</span>
-              <span class="chip purple">Spring Security</span>
-              <span class="chip purple">JWT</span>
+              <span class="chip">Spring Security</span>
+              <span class="chip">JWT</span>
               <span class="chip">Spring Data JPA</span>
               <span class="chip">Maven</span>
               <span class="chip">Docker</span>
-              <span class="chip green">GitHub Actions</span>
+              <span class="chip">GitHub Actions</span>
             </div>
             <div class="links">
-              <a class="button" href="https://github.com/MrHope123/MrHope_BankingApp" target="_blank" rel="noopener">View on GitHub →</a>
+              <a class="button" href="https://github.com/MrHope123/MrHope_BankingApp" target="_blank" rel="noopener">
+                <i data-lucide="github" class="btn-icon"></i>
+                View on GitHub
+              </a>
             </div>
           </div>
 
-          <dl class="facts glass facts-glass">
+          <dl class="facts card facts-card">
             <div>
-              <dt>Sign-up and login</dt>
+              <dt>
+                <i data-lucide="key-round" class="inline-icon"></i>
+                Sign-up and login
+              </dt>
               <dd>Passwords are hashed with BCrypt. Login returns a signed JWT, and an unknown email gets the same error as a wrong password.</dd>
             </div>
             <div>
-              <dt>Ownership in the service layer</dt>
+              <dt>
+                <i data-lucide="shield" class="inline-icon"></i>
+                Ownership in the service layer
+              </dt>
               <dd>The service checks who is calling before it reads or changes an account. A transfer must come from your own account, and a stranger cannot use the response to probe account numbers.</dd>
             </div>
             <div>
-              <dt>Money moves safely</dt>
+              <dt>
+                <i data-lucide="arrow-left-right" class="inline-icon"></i>
+                Money moves safely
+              </dt>
               <dd>Credit, debit and transfer run in transactions with row locking, so two requests at the same moment cannot overwrite each other's balance.</dd>
             </div>
             <div>
-              <dt>Tested and automated</dt>
+              <dt>
+                <i data-lucide="test-tube-2" class="inline-icon"></i>
+                Tested and automated
+              </dt>
               <dd>More than 80 unit, controller and integration tests run on every pull request in CI. They cover forged and expired tokens, cross-account access and concurrent credits.</dd>
             </div>
           </dl>
@@ -248,43 +337,64 @@
 
         <h3 class="subhead">Earlier Front-End Projects</h3>
         <ul class="project-list reveal-stagger">
-          <li class="glass project-card reveal-child">
-            <a href="https://mrhope123.github.io/Notes-App-main/" target="_blank" rel="noopener">Notes App</a>
-            <span>Create, edit and delete notes, stored in the browser. HTML, CSS, JavaScript.</span>
+          <li class="card project-card reveal-child">
+            <div class="project-card-icon">
+              <i data-lucide="sticky-note"></i>
+            </div>
+            <div>
+              <a href="https://mrhope123.github.io/Notes-App-main/" target="_blank" rel="noopener">Notes App</a>
+              <span>Create, edit and delete notes, stored in the browser. HTML, CSS, JavaScript.</span>
+            </div>
           </li>
-          <li class="glass project-card reveal-child">
-            <a href="https://mrhope123.github.io/Weather-App/" target="_blank" rel="noopener">Weather App</a>
-            <span>Current conditions and forecasts from a weather API. HTML, CSS, JavaScript.</span>
+          <li class="card project-card reveal-child">
+            <div class="project-card-icon">
+              <i data-lucide="cloud-sun"></i>
+            </div>
+            <div>
+              <a href="https://mrhope123.github.io/Weather-App/" target="_blank" rel="noopener">Weather App</a>
+              <span>Current conditions and forecasts from a weather API. HTML, CSS, JavaScript.</span>
+            </div>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- ======================================================
+    <!-- ============================================================
          APPROACH
-         ====================================================== -->
-    <section class="section" id="approach" aria-labelledby="approach-title">
+         ============================================================ -->
+    <section class="section section-dark" id="approach" aria-labelledby="approach-title">
       <div class="wrap">
-        <span class="section-label">Philosophy</span>
+        <span class="section-label">
+          <i data-lucide="lightbulb" class="label-icon"></i>
+          Philosophy
+        </span>
         <h2 id="approach-title">How I Build</h2>
         <div class="approach-grid reveal-stagger">
-          <div class="glass approach-card reveal-child">
-            <span class="approach-icon">🔒</span>
+          <div class="card approach-card reveal-child">
+            <div class="approach-icon-wrap">
+              <i data-lucide="lock"></i>
+            </div>
             <h3>Check access where it can't be skipped</h3>
             <p>The service layer decides who can touch an account, so a new endpoint or a different front end cannot get around the rule.</p>
           </div>
-          <div class="glass approach-card reveal-child">
-            <span class="approach-icon">💱</span>
+          <div class="card approach-card reveal-child">
+            <div class="approach-icon-wrap">
+              <i data-lucide="refresh-cw"></i>
+            </div>
             <h3>Treat money as a transaction</h3>
             <p>A transfer either completes fully or changes nothing. Rows are locked in a fixed order, so opposite transfers cannot deadlock.</p>
           </div>
-          <div class="glass approach-card reveal-child">
-            <span class="approach-icon">⚠️</span>
+          <div class="card approach-card reveal-child">
+            <div class="approach-icon-wrap">
+              <i data-lucide="alert-circle"></i>
+            </div>
             <h3>Make failures specific</h3>
             <p>Each error returns the right HTTP status and the same JSON shape, so a client always knows what went wrong and what to fix.</p>
           </div>
-          <div class="glass approach-card reveal-child">
-            <span class="approach-icon">✅</span>
+          <div class="card approach-card reveal-child">
+            <div class="approach-icon-wrap">
+              <i data-lucide="check-circle-2"></i>
+            </div>
             <h3>Prove it with tests</h3>
             <p>My tests try to break the rules: forged tokens, expired tokens, one customer attacking another's account, and fifty credits at once.</p>
           </div>
@@ -292,69 +402,98 @@
       </div>
     </section>
 
-    <!-- ======================================================
+    <!-- ============================================================
          SKILLS
-         ====================================================== -->
+         ============================================================ -->
     <section class="section" id="skills" aria-labelledby="skills-title">
       <div class="wrap narrow">
-        <span class="section-label">Toolkit</span>
+        <span class="section-label">
+          <i data-lucide="wrench" class="label-icon"></i>
+          Toolkit
+        </span>
         <h2 id="skills-title">Skills</h2>
 
         <div class="skills-grid reveal-stagger">
-          <div class="glass skill-card reveal-child">
+          <div class="card skill-card reveal-child">
+            <div class="skill-icon"><i data-lucide="code"></i></div>
             <div class="skill-card-label">Programming</div>
             <div class="skill-card-items">Java (OOP), JavaScript, Node.js</div>
           </div>
-          <div class="glass skill-card reveal-child">
+          <div class="card skill-card reveal-child">
+            <div class="skill-icon"><i data-lucide="server"></i></div>
             <div class="skill-card-label">Back End &amp; APIs</div>
             <div class="skill-card-items">Spring Boot, Spring Security, Spring Data JPA &amp; Hibernate, REST APIs, SOAP, Swagger/OpenAPI</div>
           </div>
-          <div class="glass skill-card reveal-child">
+          <div class="card skill-card reveal-child">
+            <div class="skill-icon"><i data-lucide="monitor"></i></div>
             <div class="skill-card-label">Front End</div>
             <div class="skill-card-items">React, JavaScript, web applications, admin portals</div>
           </div>
-          <div class="glass skill-card reveal-child">
+          <div class="card skill-card reveal-child">
+            <div class="skill-icon"><i data-lucide="database"></i></div>
             <div class="skill-card-label">Databases &amp; SQL</div>
             <div class="skill-card-items">SQL, PostgreSQL, MySQL, relational design, Flyway, Liquibase</div>
           </div>
-          <div class="glass skill-card reveal-child">
+          <div class="card skill-card reveal-child">
+            <div class="skill-icon"><i data-lucide="flask-conical"></i></div>
             <div class="skill-card-label">Testing &amp; Reliability</div>
             <div class="skill-card-items">JUnit, Mockito, automated testing, debugging, production support, Splunk</div>
           </div>
-          <div class="glass skill-card reveal-child">
+          <div class="card skill-card reveal-child">
+            <div class="skill-icon"><i data-lucide="git-branch"></i></div>
             <div class="skill-card-label">Tools &amp; Deployment</div>
             <div class="skill-card-items">Git, Bitbucket, Jira, Maven, Docker, CI/CD (Harness, Bamboo, GitHub Actions), OpenShift, Rancher</div>
           </div>
-          <div class="glass skill-card reveal-child">
+          <div class="card skill-card reveal-child">
+            <div class="skill-icon"><i data-lucide="cpu"></i></div>
             <div class="skill-card-label">AI Integration</div>
             <div class="skill-card-items">Model Context Protocol (MCP), Spring AI, AI-assisted development</div>
           </div>
         </div>
 
         <h3 class="subhead">Education</h3>
-        <div class="glass edu-card reveal">
-          <div>
-            <h4>Diploma in Computer Science</h4>
-            <p class="edu-note">Tshwane University of Technology · Specialisation: Software Development</p>
+        <div class="card edu-card reveal">
+          <div class="edu-left">
+            <div class="edu-icon"><i data-lucide="graduation-cap"></i></div>
+            <div>
+              <h4>Diploma in Computer Science</h4>
+              <p class="edu-note">Tshwane University of Technology · Specialisation: Software Development</p>
+            </div>
           </div>
-          <span class="job-meta">2020 – 2025</span>
+          <span class="job-meta">
+            <i data-lucide="calendar" class="inline-icon"></i>
+            2020 – 2025
+          </span>
         </div>
       </div>
     </section>
 
-    <!-- ======================================================
+    <!-- ============================================================
          CONTACT
-         ====================================================== -->
-    <section class="section" id="contact" aria-labelledby="contact-title">
+         ============================================================ -->
+    <section class="section section-dark" id="contact" aria-labelledby="contact-title">
       <div class="wrap">
-        <div class="glass contact-wrap reveal">
+        <div class="contact-wrap reveal">
+          <div class="contact-icon-wrap">
+            <i data-lucide="send"></i>
+          </div>
           <span class="section-label">Get in touch</span>
-          <h2 id="contact-title" style="font-size: clamp(1.9rem, 3.5vw, 2.5rem); margin-bottom: 16px;">Contact</h2>
+          <h2 id="contact-title">Contact</h2>
           <p class="contact-lead">If you are hiring software engineers or have a backend problem to solve, email me.</p>
-          <p class="contact-email"><a href="mailto:fulufhelomalulekefm@gmail.com">fulufhelomalulekefm@gmail.com</a></p>
+          <p class="contact-email">
+            <a href="mailto:fulufhelomalulekefm@gmail.com">fulufhelomalulekefm@gmail.com</a>
+          </p>
           <ul class="contact-links">
-            <li><a href="https://github.com/MrHope123" target="_blank" rel="noopener">GitHub: MrHope123</a></li>
-            <li>Johannesburg, South Africa</li>
+            <li>
+              <a href="https://github.com/MrHope123" target="_blank" rel="noopener">
+                <i data-lucide="github" class="inline-icon"></i>
+                MrHope123
+              </a>
+            </li>
+            <li class="contact-location">
+              <i data-lucide="map-pin" class="inline-icon"></i>
+              Johannesburg, South Africa
+            </li>
           </ul>
         </div>
       </div>
@@ -369,5 +508,6 @@
   </footer>
 
   <script src="main.js"></script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>

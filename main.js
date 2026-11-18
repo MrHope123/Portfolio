@@ -11,24 +11,47 @@
   var scenarios = demo.querySelectorAll('.scenario');
 
   function show(name) {
-    buttons.forEach(function (button) {
-      button.setAttribute(
-        'aria-pressed',
-        String(button.getAttribute('data-scenario') === name)
-      );
+    buttons.forEach(function (btn) {
+      btn.setAttribute('aria-pressed', String(btn.getAttribute('data-scenario') === name));
     });
-    scenarios.forEach(function (scenario) {
-      scenario.hidden = scenario.getAttribute('data-scenario') !== name;
+    scenarios.forEach(function (s) {
+      s.hidden = s.getAttribute('data-scenario') !== name;
     });
   }
 
-  buttons.forEach(function (button) {
-    button.addEventListener('click', function () {
-      show(button.getAttribute('data-scenario'));
-    });
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () { show(btn.getAttribute('data-scenario')); });
   });
 
   show('other');
+})();
+
+
+// ============================================================
+// Hamburger menu
+// ============================================================
+(function () {
+  var toggle = document.querySelector('.nav-toggle');
+  var menu   = document.getElementById('mobile-menu');
+  if (!toggle || !menu) { return; }
+
+  toggle.addEventListener('click', function () {
+    var open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    menu.setAttribute('aria-hidden', String(open));
+    menu.classList.toggle('open', !open);
+    document.body.style.overflow = open ? '' : 'hidden';
+  });
+
+  // Close when a link is clicked
+  menu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      toggle.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-hidden', 'true');
+      menu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
 })();
 
 
