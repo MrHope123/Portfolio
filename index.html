@@ -65,7 +65,7 @@
          HERO
          ============================================================ -->
     <section class="hero" id="top">
-      <div class="wrap hero-grid">
+      <div class="wrap hero-single">
         <div class="hero-copy">
           <span class="section-label">
             <i data-lucide="map-pin" class="label-icon"></i>
@@ -83,65 +83,6 @@
               Email me
             </a>
           </div>
-        </div>
-
-        <!-- Demo panel -->
-        <div class="demo card" data-demo aria-labelledby="demo-title">
-          <h2 class="demo-title" id="demo-title">
-            <i data-lucide="terminal" class="demo-icon"></i>
-            Same request, two callers
-          </h2>
-          <p class="demo-intro">A transfer of R250 out of one account, sent to my own banking API project.</p>
-
-          <div class="demo-controls js-only" role="group" aria-label="Choose who sends the request">
-            <button type="button" data-scenario="owner" aria-pressed="false">
-              <i data-lucide="shield-check" class="btn-icon"></i>
-              Account owner
-            </button>
-            <button type="button" data-scenario="other" aria-pressed="true">
-              <i data-lucide="shield-off" class="btn-icon"></i>
-              Different customer
-            </button>
-          </div>
-
-          <pre class="code request"><code>POST /api/user/transfer
-{
-  "sourceAccountNumber": "2026481203",
-  "destinationAccountNumber": "2026774510",
-  "amount": 250.00
-}</code></pre>
-
-          <div class="scenario" data-scenario="owner">
-            <p class="caller">Sent with the token of the account owner</p>
-            <p class="status allow">
-              <span class="status-code">200 OK</span>
-              Allowed. The money moves.
-            </p>
-            <pre class="code response"><code>{
-  "responseCode": "008",
-  "responseMessage": "Transfer completed successfully",
-  "accountInfo": {
-    "accountName": "Sample Customer",
-    "accountBalance": 750.00,
-    "accountNumber": "2026481203"
-  }
-}</code></pre>
-          </div>
-
-          <div class="scenario" data-scenario="other">
-            <p class="caller">Sent with the token of a different customer</p>
-            <p class="status deny">
-              <span class="status-code">403 Forbidden</span>
-              Refused. Nothing changes.
-            </p>
-            <pre class="code response"><code>{
-  "status": 403,
-  "responseCode": "012",
-  "responseMessage": "You do not have access to this account"
-}</code></pre>
-          </div>
-
-          <p class="demo-note">Sample data. These are the real response shapes from the project below.</p>
         </div>
       </div>
     </section>

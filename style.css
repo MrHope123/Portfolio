@@ -200,17 +200,14 @@ svg.lucide {
   padding-block: clamp(64px, 11vw, 120px) clamp(72px, 12vw, 130px);
   border-bottom: 1px solid var(--border);
 }
-.hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(40px, 7vw, 80px);
-  align-items: start;
+.hero-single {
+  max-width: 760px;
 }
 .hero-copy h1 {
   font-size: clamp(2.4rem, 5.5vw, 3.8rem);
   line-height: 1.04;
   letter-spacing: -0.04em;
-  max-width: 15ch;
+  max-width: 20ch;
   color: var(--ink);
 }
 .keep { white-space: nowrap; }
@@ -847,7 +844,7 @@ svg.lucide {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 860px) {
-  .hero-grid, .feature { grid-template-columns: minmax(0, 1fr); }
+  .feature { grid-template-columns: minmax(0, 1fr); }
   .hero-copy h1 { max-width: 20ch; }
   .nav-desktop { display: none; }
   .nav-toggle { display: inline-flex; }
