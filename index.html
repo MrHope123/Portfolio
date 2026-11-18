@@ -3,205 +3,219 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Home Page</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="color-scheme" content="light">
+  <title>Maluleke Fulufhelo | Java developer</title>
+  <meta name="description" content="Java developer with two years of experience at FNB. I build secure, well-tested backend services with Spring Boot.">
+  <meta property="og:title" content="Maluleke Fulufhelo | Java developer">
+  <meta property="og:description" content="Two years at FNB. Secure REST APIs, Spring Boot, and tests that prove the rules.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316212C'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='15' font-weight='700' text-anchor='middle' fill='white'%3EMF%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
-  <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Portfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Project</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">Maluleke Fulufhelo</a>
+      <nav aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
   </header>
 
-  <section class="home d-flex align-items-center" id="home">
-    <div class="container text-center text-md-start">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <h3>Hello, It's me</h3>
-          <h1>Maluleke Fulufhelo</h1>
-          <h3>And I'm a <span class="text"></span></h3>
-          <p>A web developer with extensive skills in front-end development. Skills include website design, front-end design, and back-end development.</p>
-          <div class="social-icons">
-            <a href="#" class="text-decoration-none"><box-icon type='logo' name='facebook-circle'></box-icon></a>
-            <a href="#" class="text-decoration-none"><box-icon name='instagram' type='logo'></box-icon></a>
-            <a href="#" class="text-decoration-none"><box-icon name='whatsapp' type='logo'></box-icon></a>
-            <a href="#" class="text-decoration-none"><box-icon name='tiktok' type='logo'></box-icon></a>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>I build backend services that handle money correctly.</h1>
+          <p class="lead">Java developer with two years at FNB. I write secure REST APIs with Spring Boot, and tests that prove the rules hold.</p>
+          <div class="actions">
+            <a class="button" href="#work">See the banking API</a>
+            <a class="text-link" href="mailto:fulufhelomalulekefm@gmail.com">Email me</a>
           </div>
-          <a href="#" class="btn btn-primary mt-4">More About Me</a>
         </div>
-        <div class="col-md-6">
-          <img src="my-profile.jpeg" alt="Profile Image" class="img-fluid rounded">
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="about py-5" id="about">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <img src="code_4x.png" alt="Image not found" class="img-fluid rounded">
-        </div>
-        <div class="col-md-6">
-          <h2>About <span>Me</span></h2>
-          <h4>Software Developer</h4>
-          <p>Hello! My name is Fulufhelo, and I am a final year Computer Science student at Tshwane University of Technology. I have a strong foundation in software development and love creating solutions that improve efficiency and user experience. I have focused on software engineering, web development, and back-end development. I am proficient in Java, Kotlin, JavaScript, and Python. In my free time, I enjoy coding, which keeps me creative and motivated. I am dedicated, quick to learn, and always ready for new challenges. Thank you for visiting my portfolio. I look forward to connecting with you!</p>
-          <a href="#" class="btn btn-primary mt-4">More About Me</a>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="demo" data-demo aria-labelledby="demo-title">
+          <h2 class="demo-title" id="demo-title">Same request, two callers</h2>
+          <p class="demo-intro">A transfer of R250 out of one account, sent to my banking API.</p>
 
-  <section class="skills py-5" id="skills">
-    <div class="container">
-      <h1 class="sub-title text-center">My <span>Skills</span></h1>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="progress my-4">
-            <div class="progress-bar bg-success" role="progressbar" style="width: 90%">HTML</div>
+          <div class="demo-controls js-only" role="group" aria-label="Choose who sends the request">
+            <button type="button" data-scenario="owner" aria-pressed="false">Account owner</button>
+            <button type="button" data-scenario="other" aria-pressed="true">A different customer</button>
           </div>
-          <div class="progress my-4">
-            <div class="progress-bar bg-info" role="progressbar" style="width: 80%">CSS</div>
-          </div>
-          <div class="progress my-4">
-            <div class="progress-bar bg-warning" role="progressbar" style="width: 60%">JavaScript</div>
-          </div>
-          <div class="progress my-4">
-            <div class="progress-bar bg-green" role="progressbar" style="width: 85%">Spring Boot</div>
-          </div>
-          <div class="progress my-4">
-            <div class="progress-bar bg-secondary" role="progressbar" style="width: 50%">MySQL</div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="progress my-4">
-            <div class="progress-bar bg-danger" role="progressbar" style="width: 70%">Java</div>
-          </div>
-          <div class="progress my-4">
-            <div class="progress-bar bg-primary" role="progressbar" style="width: 40%">Python</div>
-          </div>
-          <div class="progress my-4">
-            <div class="progress-bar bg-secondary" role="progressbar" style="width: 75%">SQL</div>
-          </div>
-          <div class="progress my-4">
-            <div class="progress-bar bg-dark" role="progressbar" style="width: 35%">Kotlin</div>
-          </div>
-          <div class="progress my-4">
-            <div class="progress-bar bg-primary" role="progressbar" style="width: 65%">Bootstrap</div>
-          </div>
-          <div class="progress my-4">
-            <div class="progress-bar bg-warning" role="progressbar" style="width: 55%">Git</div>
-          </div>
-          <div class="progress my-4">
-            <div class="progress-bar bg-success" role="progressbar" style="width: 45%">Spring MVC</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <section class="portfolio py-5" id="portfolio">
-    <div class="container">
-      <h1 class="sub-title text-center">My <span>Projects</span></h1>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="java-project-ideas.webp" class="card-img-top" alt="Project 1">
-            <div class="card-body">
-              <h5 class="card-title">Project 1: Personal Portfolio Website</h5>
-              <p class="card-text">A responsive portfolio website to showcase my projects and skills. <b>HTML, CSS, JS</b></p>
-              <a href="https://mrhope123.github.io/Portfolio/" class="btn btn-primary">View Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="java-project-ideas.webp" class="card-img-top" alt="Project 2">
-            <div class="card-body">
-              <h5 class="card-title">Project 2: Notes-App</h5>
-              <p class="card-text">A simple note taking application that uses browser storage to create, edit, update, and delete notes created by the user.</p>
-              <a href="https://mrhope123.github.io/Notes-App-main/
-              " class="btn btn-primary">View Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="java-project-ideas.webp" class="card-img-top" alt="Project 3">
-            <div class="card-body">
-              <h5 class="card-title">Project 3: Weather-App</h5>
-              <p class="card-text">Get real-time weather updates using WeatherAPI, powered by reliable API data. Stay informed with accurate forecasts, current conditions.</p>
-              <a href="https://mrhope123.github.io/Weather-App/" class="btn btn-primary">View Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="contact py-5" id="contact">
-    <div class="container">
-      <h1 class="sub-title text-center">Contact <span>Me</span></h1>
-      <div class="row">
-        <div class="col-md-6">
-          <form action="https://formspree.io/f/xwpeeddj" method="POST">
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Name" name="name" required>
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email" name="email" required validate>
-            </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Subject" name="subject" required>
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="5" placeholder="Message" name="message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
+          <pre class="code request"><code>POST /api/user/transfer
+{
+  "sourceAccountNumber": "2026481203",
+  "destinationAccountNumber": "2026774510",
+  "amount": 250.00
+}</code></pre>
+
+          <div class="scenario" data-scenario="owner">
+            <p class="caller">Sent with the token of the account owner</p>
+            <p class="status allow"><span class="status-code">200 OK</span> Allowed. The money moves.</p>
+            <pre class="code response"><code>{
+  "responseCode": "008",
+  "responseMessage": "Transfer completed successfully",
+  "accountInfo": {
+    "accountName": "Sample Customer",
+    "accountBalance": 750.00,
+    "accountNumber": "2026481203"
+  }
+}</code></pre>
+          </div>
+
+          <div class="scenario" data-scenario="other">
+            <p class="caller">Sent with the token of a different customer</p>
+            <p class="status deny"><span class="status-code">403 Forbidden</span> Refused. Nothing changes.</p>
+            <pre class="code response"><code>{
+  "status": 403,
+  "responseCode": "012",
+  "responseMessage": "You do not have access to this account"
+}</code></pre>
+          </div>
+
+          <p class="demo-note">Sample data. These are the real response shapes from the project below.</p>
         </div>
-        <div class="col-md-6">
-          <div class="contact-info">
-            <p><box-icon name='map' type='solid'></box-icon> Address: Soshanguve</p>
-            <p><box-icon name='phone' type='solid'></box-icon> Phone: 0671209514</p>
-            <p><box-icon name='envelope' type='solid'></box-icon> Email: fulufhelomalulekefm@gmail.com</p>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <h2 id="work-title">Selected work</h2>
+
+        <article class="feature">
+          <div class="feature-intro">
+            <h3>Secure banking API</h3>
+            <p>A Spring Boot REST API where customers sign up, log in, and move money between accounts. Every customer can reach only their own account, and the rule is enforced where it cannot be bypassed.</p>
+            <p class="stack">Java 17, Spring Boot 3, Spring Security, JWT, Spring Data JPA, Maven, Docker, GitHub Actions</p>
+            <p class="links">
+              <a class="button" href="https://github.com/MrHope123/MrHope_BankingApp">View the code on GitHub</a>
+            </p>
+          </div>
+          <dl class="facts">
+            <div>
+              <dt>Sign-up and login</dt>
+              <dd>Passwords are hashed with BCrypt. Login returns a signed JWT, and an unknown email gets the same error as a wrong password.</dd>
+            </div>
+            <div>
+              <dt>Ownership in the service layer</dt>
+              <dd>The service checks who is calling before it reads or changes an account. A transfer must come from your own account, and a stranger cannot use the response to probe account numbers.</dd>
+            </div>
+            <div>
+              <dt>Money moves safely</dt>
+              <dd>Credit, debit and transfer run in transactions with row locking, so two requests at the same moment cannot overwrite each other's balance.</dd>
+            </div>
+            <div>
+              <dt>Tested and automated</dt>
+              <dd>More than 80 unit, controller and integration tests run on every pull request in CI. They cover forged and expired tokens, cross-account access and concurrent credits.</dd>
+            </div>
+          </dl>
+        </article>
+
+        <h3 class="subhead">Earlier front-end projects</h3>
+        <ul class="project-list">
+          <li>
+            <a href="https://mrhope123.github.io/Notes-App-main/">Notes app</a>
+            <span>Create, edit and delete notes, stored in the browser. HTML, CSS, JavaScript.</span>
+          </li>
+          <li>
+            <a href="https://mrhope123.github.io/Weather-App/">Weather app</a>
+            <span>Current conditions and forecasts from a weather API. HTML, CSS, JavaScript.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="approach" aria-labelledby="approach-title">
+      <div class="wrap">
+        <h2 id="approach-title">How I build</h2>
+        <div class="approach-grid">
+          <div>
+            <h3>Check access where it can't be skipped</h3>
+            <p>The service layer decides who can touch an account, so a new endpoint or a different front end cannot get around the rule.</p>
+          </div>
+          <div>
+            <h3>Treat money as a transaction</h3>
+            <p>A transfer either completes fully or changes nothing. Rows are locked in a fixed order, so opposite transfers cannot deadlock.</p>
+          </div>
+          <div>
+            <h3>Make failures specific</h3>
+            <p>Each error returns the right HTTP status and the same JSON shape, so a client always knows what went wrong and what to fix.</p>
+          </div>
+          <div>
+            <h3>Prove it with tests</h3>
+            <p>My tests try to break the rules: forged tokens, expired tokens, one customer attacking another's account, and fifty credits at once.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2024 Maluleke Fulufhelo. All rights reserved.</p>
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap narrow">
+        <h2 id="experience-title">Experience</h2>
+        <article class="job">
+          <h3>Java developer, FNB</h3>
+          <p class="job-meta">2 years</p>
+          <p>Two years as a Java developer at one of South Africa's largest banks. Banking software has to be correct, secure and dependable, and those are the standards I hold my own projects to.</p>
+          <p>I can't share code from that work, so the banking API above is my public example of how I build.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap narrow">
+        <h2 id="skills-title">Skills</h2>
+        <dl class="skills">
+          <div>
+            <dt>Backend</dt>
+            <dd>Java, Spring Boot, Spring Security and JWT, Spring Data JPA and Hibernate, REST APIs, Bean Validation</dd>
+          </div>
+          <div>
+            <dt>Testing and delivery</dt>
+            <dd>JUnit 5, Mockito, Maven, Docker, GitHub Actions, Swagger and OpenAPI, Git</dd>
+          </div>
+          <div>
+            <dt>Data</dt>
+            <dd>SQL, MySQL</dd>
+          </div>
+          <div>
+            <dt>Also used</dt>
+            <dd>JavaScript, HTML and CSS, Kotlin, Python</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap narrow">
+        <h2 id="contact-title">Contact</h2>
+        <p class="contact-lead">If you are hiring Java developers or have a backend problem to solve, email me.</p>
+        <p class="contact-email"><a href="mailto:fulufhelomalulekefm@gmail.com">fulufhelomalulekefm@gmail.com</a></p>
+        <ul class="contact-links">
+          <li><a href="https://github.com/MrHope123">GitHub: MrHope123</a></li>
+          <li>Gauteng, South Africa</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Maluleke Fulufhelo</p>
+    </div>
   </footer>
 
   <script src="main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
