@@ -105,7 +105,8 @@ svg.lucide {
   align-items: center;
   justify-content: space-between;
   padding-block: 15px;
-  gap: 16px;
+  gap: 12px;
+  min-width: 0;
 }
 .brand {
   font-weight: 700;
@@ -135,6 +136,7 @@ svg.lucide {
   display: none;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 36px; height: 36px;
   background: none;
   border: 1px solid var(--border);
@@ -145,9 +147,14 @@ svg.lucide {
   transition: background 0.15s;
 }
 .nav-toggle:hover { background: var(--bg-off); }
-.icon-close { display: none; }
+
+/* Always hide close, always show menu by default */
+.nav-toggle .icon-menu  { display: block; width: 18px; height: 18px; }
+.nav-toggle .icon-close { display: none;  width: 18px; height: 18px; }
+
+/* When open: swap icons */
 .nav-toggle[aria-expanded="true"] .icon-menu  { display: none; }
-.nav-toggle[aria-expanded="true"] .icon-close { display: inline-block; }
+.nav-toggle[aria-expanded="true"] .icon-close { display: block; }
 
 /* Mobile menu */
 .mobile-menu {
