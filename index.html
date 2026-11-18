@@ -335,6 +335,64 @@
           </dl>
         </div>
 
+        <h3 class="subhead">Other Public Projects</h3>
+
+        <!-- Portfolio MCP -->
+        <div class="feature reveal">
+          <div class="card feature-card feature-intro">
+            <h3>
+              <i data-lucide="bot" class="project-icon"></i>
+              Portfolio MCP Server
+            </h3>
+            <p>An MCP (Model Context Protocol) server that exposes this portfolio to AI agents. Any AI tool that supports MCP — Claude, Copilot, Cursor — can call it to answer questions about my experience, skills and projects without reading the page.</p>
+            <p style="margin-top:12px; font-size:0.875rem; color:var(--ink-soft);">Built with the same stack I used at FNB for Hexaro MCP — this is a live, working example of that skill.</p>
+            <div class="chip-row">
+              <span class="chip">Java 21</span>
+              <span class="chip">Spring Boot 3</span>
+              <span class="chip">Spring AI</span>
+              <span class="chip">MCP</span>
+              <span class="chip">Maven</span>
+            </div>
+            <div class="links">
+              <a class="button" href="https://github.com/MrHope123/portfolio-mcp" target="_blank" rel="noopener">
+                <i data-lucide="github" class="btn-icon"></i>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <dl class="facts card facts-card">
+            <div>
+              <dt>
+                <i data-lucide="wrench" class="inline-icon"></i>
+                7 callable tools
+              </dt>
+              <dd>getProfile, getExperience, getProjects, getSkills, getEducation, getContact, and a keyword search tool — all exposed as standard MCP tools.</dd>
+            </div>
+            <div>
+              <dt>
+                <i data-lucide="search" class="inline-icon"></i>
+                Keyword search
+              </dt>
+              <dd>An AI agent can call <code style="font-family:var(--font-mono);font-size:0.8em;">search("Docker")</code> and get back every project, skill and experience entry that mentions Docker.</dd>
+            </div>
+            <div>
+              <dt>
+                <i data-lucide="plug" class="inline-icon"></i>
+                Works with any MCP client
+              </dt>
+              <dd>Compatible with Claude Desktop, Cursor, GitHub Copilot and any other tool that speaks the Model Context Protocol.</dd>
+            </div>
+            <div>
+              <dt>
+                <i data-lucide="cpu" class="inline-icon"></i>
+                Same pattern as FNB work
+              </dt>
+              <dd>Built using the same Spring AI MCP approach used in Hexaro MCP at FNB — a direct demonstration of that enterprise experience.</dd>
+            </div>
+          </dl>
+        </div>
+
         <h3 class="subhead">Earlier Front-End Projects</h3>
         <ul class="project-list reveal-stagger">
           <li class="card project-card reveal-child">
