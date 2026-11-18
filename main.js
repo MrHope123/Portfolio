@@ -37,40 +37,54 @@
 // ============================================================
 (function () {
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (prefersReduced) { return; }
 
-  var revealEls = document.querySelectorAll('.reveal');
-  var staggerGroups = document.querySelectorAll('.reveal-stagger');
-
-  // Mark stagger children as reveal targets too
-  staggerGroups.forEach(function (group) {
-    var children = group.querySelectorAll('.reveal-child');
-    children.forEach(function (child) {
+  // Collect all stagger children and mark them as reveal targets
+  // before we hide anything, so the list is complete
+  document.querySelectorAll('.reveal-stagger').forEach(function (group) {
+    group.querySelectorAll('.reveal-child').forEach(function (child) {
       child.classList.add('reveal');
     });
   });
 
-  // Refresh full list after adding stagger children
-  revealEls = document.querySelectorAll('.reveal');
+  var revealEls = Array.from(document.querySelectorAll('.reveal'));
 
-  if (!('IntersectionObserver' in window)) {
-    revealEls.forEach(function (el) { el.classList.add('visible'); });
-    return;
-  }
+  // If reduced motion, never hide anything — just leave elements visible
+  if (prefersReduced) { return; }
 
-  var observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+  if (!('IntersectionObserver' in window)) { return; }
+
+  // Use two rAF calls to guarantee the browser has painted at least one
+  // frame before we apply opacity:0, so there is no flash of invisible content
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+
+      // Now safe to activate the CSS hide rule
+      document.documentElement.classList.add('js-reveal-ready');
+
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+      );
+
+      revealEls.forEach(function (el) {
+        var rect = el.getBoundingClientRect();
+        // Already on screen when page loads — reveal with a short stagger
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          setTimeout(function () { el.classList.add('visible'); }, 120);
+        } else {
+          observer.observe(el);
         }
       });
-    },
-    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-  );
 
-  revealEls.forEach(function (el) { observer.observe(el); });
+    });
+  });
 })();
 
 
@@ -95,9 +109,9 @@
 
     navLinks.forEach(function (link) {
       var active = current && link.getAttribute('href') === '#' + current.id;
-      link.style.color = active ? 'var(--text)' : '';
-      link.style.borderColor = active ? 'var(--border)' : '';
-      link.style.background = active ? 'var(--bg-card)' : '';
+      link.style.color        = active ? 'var(--text)'    : '';
+      link.style.borderColor  = active ? 'var(--border)'  : '';
+      link.style.background   = active ? 'var(--bg-card)' : '';
     });
   }
 
