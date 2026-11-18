@@ -56,7 +56,53 @@
 
 
 // ============================================================
-// Scroll-reveal: fade + slide up on entering viewport
+// Project modals
+// ============================================================
+(function () {
+  var overlay = document.getElementById('modal-overlay');
+  var modals  = document.querySelectorAll('.project-modal');
+  var current = null;
+
+  function openModal(id) {
+    var modal = document.getElementById(id);
+    if (!modal) { return; }
+    current = modal;
+    modal.showModal ? modal.showModal() : modal.setAttribute('open', '');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('.modal-close').focus();
+  }
+
+  function closeModal() {
+    if (!current) { return; }
+    current.close ? current.close() : current.removeAttribute('open');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+    current = null;
+  }
+
+  // Open on button click
+  document.querySelectorAll('.project-modal-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      openModal(btn.getAttribute('data-modal'));
+    });
+  });
+
+  // Close buttons inside modals
+  document.querySelectorAll('.modal-close').forEach(function (btn) {
+    btn.addEventListener('click', closeModal);
+  });
+
+  // Close on overlay click
+  overlay.addEventListener('click', closeModal);
+
+  // Close on Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && current) { closeModal(); }
+  });
+})();
+
+
 // ============================================================
 (function () {
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

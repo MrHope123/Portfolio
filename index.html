@@ -201,6 +201,9 @@
               <span class="chip">React</span>
               <span class="chip">REST APIs</span>
             </div>
+            <button class="project-modal-btn" data-modal="modal-hexaro-portal">
+              <i data-lucide="info" class="btn-icon"></i> View details
+            </button>
           </div>
 
           <div class="card tech-project-card reveal-child">
@@ -217,6 +220,9 @@
               <span class="chip">Spring Security</span>
               <span class="chip">Docker</span>
             </div>
+            <button class="project-modal-btn" data-modal="modal-tms">
+              <i data-lucide="info" class="btn-icon"></i> View details
+            </button>
           </div>
 
           <div class="card tech-project-card reveal-child">
@@ -231,6 +237,9 @@
               <span class="chip">REST APIs</span>
               <span class="chip">JUnit</span>
             </div>
+            <button class="project-modal-btn" data-modal="modal-hexaro-hive">
+              <i data-lucide="info" class="btn-icon"></i> View details
+            </button>
           </div>
 
           <div class="card tech-project-card reveal-child">
@@ -246,6 +255,9 @@
               <span class="chip">JSON-RPC</span>
               <span class="chip">Maven</span>
             </div>
+            <button class="project-modal-btn" data-modal="modal-hexaro-mcp">
+              <i data-lucide="info" class="btn-icon"></i> View details
+            </button>
           </div>
 
           <div class="card tech-project-card reveal-child">
@@ -261,6 +273,9 @@
               <span class="chip">JUnit</span>
               <span class="chip">Maven</span>
             </div>
+            <button class="project-modal-btn" data-modal="modal-distribution">
+              <i data-lucide="info" class="btn-icon"></i> View details
+            </button>
           </div>
 
         </div>
@@ -506,6 +521,210 @@
       <p>&copy; 2026 Fulufhelo Maluleke</p>
     </div>
   </footer>
+
+  <!-- ============================================================
+       PROJECT MODALS
+       ============================================================ -->
+  <div class="modal-overlay" id="modal-overlay" aria-hidden="true"></div>
+
+  <!-- Hexaro Portal -->
+  <dialog class="project-modal" id="modal-hexaro-portal" aria-labelledby="modal-hexaro-portal-title">
+    <div class="modal-header">
+      <div class="modal-title-row">
+        <i data-lucide="layout-dashboard" class="modal-icon"></i>
+        <h3 id="modal-hexaro-portal-title">Hexaro Portal</h3>
+      </div>
+      <button class="modal-close" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-subtitle">Content Management Admin Portal</p>
+      <div class="modal-section">
+        <h4><i data-lucide="target" class="inline-icon"></i> What it does</h4>
+        <p>A full admin portal for managing enterprise content — uploading files, searching documents, retrieving assets and editing metadata. Built as a React SPA backed by a dedicated Spring Boot BFF layer.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i data-lucide="user" class="inline-icon"></i> My role</h4>
+        <p>Built the React frontend components and the Spring Boot backend-for-frontend, designed the API contracts between them, and implemented file upload and search flows end to end.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i data-lucide="zap" class="inline-icon"></i> Key challenges</h4>
+        <p>Keeping the UI responsive during large file uploads while providing accurate progress feedback, and handling concurrent metadata updates without race conditions on the backend.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i data-lucide="wrench" class="inline-icon"></i> Stack</h4>
+        <div class="chip-row">
+          <span class="chip">Java 25</span><span class="chip">Spring Boot 4</span>
+          <span class="chip">React</span><span class="chip">REST APIs</span>
+        </div>
+      </div>
+      <div class="modal-notice">
+        <i data-lucide="lock" class="inline-icon"></i>
+        Source code is proprietary to FNB and is not publicly available.
+      </div>
+    </div>
+  </dialog>
+
+  <!-- TMS Self-Service -->
+  <dialog class="project-modal" id="modal-tms" aria-labelledby="modal-tms-title">
+    <div class="modal-header">
+      <div class="modal-title-row">
+        <i data-lucide="file-text" class="modal-icon"></i>
+        <h3 id="modal-tms-title">TMS Self-Service</h3>
+      </div>
+      <button class="modal-close" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-subtitle">Document Template Management System</p>
+      <div class="modal-section">
+        <h4><i data-lucide="target" class="inline-icon"></i> What it does</h4>
+        <p>A self-service application for creating, editing, downloading and generating PDF documents from reusable templates. Includes version history and a Swagger UI for API exploration.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i data-lucide="user" class="inline-icon"></i> My role</h4>
+        <p>Built the full application — Spring Boot REST API, PostgreSQL schema with Flyway migrations, Spring Security for authentication, PDF generation logic, and Docker containerisation for deployment.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i data-lucide="zap" class="inline-icon"></i> Key challenges</h4>
+        <p>Generating accurate PDFs from dynamic templates with varying layouts, and managing database schema evolution safely across releases using Flyway migrations.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i data-lucide="wrench" class="inline-icon"></i> Stack</h4>
+        <div class="chip-row">
+          <span class="chip">Java</span><span class="chip">Spring Boot</span>
+          <span class="chip">PostgreSQL</span><span class="chip">Flyway</span>
+          <span class="chip">Spring Security</span><span class="chip">Docker</span>
+          <span class="chip">Swagger/OpenAPI</span>
+        </div>
+      </div>
+      <div class="modal-notice">
+        <i data-lucide="lock" class="inline-icon"></i>
+        Source code is proprietary to FNB and is not publicly available.
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Hexaro Hive -->
+  <dialog class="project-modal" id="modal-hexaro-hive" aria-labelledby="modal-hexaro-hive-title">
+    <div class="modal-header">
+      <div class="modal-title-row">
+        <i data-lucide="database" class="modal-icon"></i>
+        <h3 id="modal-hexaro-hive-title">Hexaro Hive</h3>
+      </div>
+      <button class="modal-close" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-subtitle">Content Management REST API</p>
+      <div class="modal-section">
+        <h4><i data-lucide="target" class="inline-icon"></i> What it does</h4>
+        <p>A REST API for managing enterprise documents — upload, retrieval, search, and updates. Supports document versioning so previous states are preserved, and concurrency control to prevent conflicting writes.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i data-lucide="user" class="inline-icon"></i> My role</h4>
+        <p>Developed the core API endpoints, implemented file validation rules, built document versioning logic, and wrote the automated test suite covering edge cases and concurrent access scenarios.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i data-lucide="zap" class="inline-icon"></i> Key challenges</h4>
+        <p>Designing a versioning model that is queryable and storage-efficient, and writing tests that reliably reproduce concurrent write conflicts to prove the locking strategy works.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i data-lucide="wrench" class="inline-icon"></i> Stack</h4>
+        <div class="chip-row">
+          <span class="chip">Java</span><span class="chip">Spring Boot</span>
+          <span class="chip">REST APIs</span><span class="chip">JUnit</span>
+        </div>
+      </div>
+      <div class="modal-notice">
+        <i data-lucide="lock" class="inline-icon"></i>
+        Source code is proprietary to FNB and is not publicly available.
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Hexaro MCP -->
+  <dialog class="project-modal" id="modal-hexaro-mcp" aria-labelledby="modal-hexaro-mcp-title">
+    <div class="modal-header">
+      <div class="modal-title-row">
+        <i data-lucide="bot" class="modal-icon"></i>
+        <h3 id="modal-hexaro-mcp-title">Hexaro MCP</h3>
+      </div>
+      <button class="modal-close" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-subtitle">AI Integration Microservice</p>
+      <div class="modal-section">
+        <h4><i data-lucide="target" class="inline-icon"></i> What it does</h4>
+        <p>A Spring Boot microservice that exposes enterprise content to AI agents via the Model Context Protocol. AI tools can search documents, fetch content, upload files and trigger updates — all through a standard MCP interface.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i data-lucide="user" class="inline-icon"></i> My role</h4>
+        <p>Designed and built the full microservice — MCP tool definitions, JSON-RPC transport layer, Spring AI integration, and virtual thread configuration for high-concurrency handling.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i data-lucide="zap" class="inline-icon"></i> Key challenges</h4>
+        <p>Mapping enterprise content operations cleanly onto MCP tool schemas so AI agents can invoke them reliably, and tuning virtual thread usage to handle many simultaneous agent requests efficiently.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i data-lucide="wrench" class="inline-icon"></i> Stack</h4>
+        <div class="chip-row">
+          <span class="chip">Java 25</span><span class="chip">Spring AI</span>
+          <span class="chip">Virtual Threads</span><span class="chip">JSON-RPC</span>
+          <span class="chip">Maven</span><span class="chip">MCP</span>
+        </div>
+      </div>
+      <div class="modal-notice">
+        <i data-lucide="lock" class="inline-icon"></i>
+        Source code is proprietary to FNB and is not publicly available.
+      </div>
+    </div>
+  </dialog>
+
+  <!-- DistributionService -->
+  <dialog class="project-modal" id="modal-distribution" aria-labelledby="modal-distribution-title">
+    <div class="modal-header">
+      <div class="modal-title-row">
+        <i data-lucide="arrow-right-left" class="modal-icon"></i>
+        <h3 id="modal-distribution-title">DistributionService</h3>
+      </div>
+      <button class="modal-close" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-subtitle">Legacy Java Application Migration</p>
+      <div class="modal-section">
+        <h4><i data-lucide="target" class="inline-icon"></i> What it does</h4>
+        <p>A modernised distribution service migrated from a legacy JBoss WAR deployment to a self-contained Spring Boot JAR. The application handles document distribution workflows across internal systems.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i data-lucide="user" class="inline-icon"></i> My role</h4>
+        <p>Led the migration — restructured the Maven project, replaced all javax annotations with jakarta equivalents, updated Spring configuration from XML to Java-based, and updated and re-ran the full unit test suite to confirm nothing broke.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i data-lucide="zap" class="inline-icon"></i> Key challenges</h4>
+        <p>Tracking down every implicit javax dependency across a large legacy codebase, and making sure tests still covered the same behaviour after the architecture change — not just the happy path.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i data-lucide="wrench" class="inline-icon"></i> Stack</h4>
+        <div class="chip-row">
+          <span class="chip">Java</span><span class="chip">JBoss/WAR</span>
+          <span class="chip">Spring Boot</span><span class="chip">JUnit</span>
+          <span class="chip">Maven</span>
+        </div>
+      </div>
+      <div class="modal-notice">
+        <i data-lucide="lock" class="inline-icon"></i>
+        Source code is proprietary to FNB and is not publicly available.
+      </div>
+    </div>
+  </dialog>
 
   <script src="main.js"></script>
   <script>lucide.createIcons();</script>
